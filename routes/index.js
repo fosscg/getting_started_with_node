@@ -13,8 +13,13 @@ router.get('/greet/:from/:to', function(req, res){
     })
 });
 
-router.post('/post', function(req, res){
-   res.send('POST route on things.')
+router.post('/formpost', function(req, res){
+    console.log(req.params)
+    return res.render('result', {
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    })
 });
 
 router.get('/loop', (req, res) => {
@@ -34,6 +39,10 @@ router.get('/loop', (req, res) => {
     return res.render('loop', {
         data: persons
     })
+})
+
+router.get('/form', (req, res) => {
+    return res.render('forms')
 })
 
 router.get('/', (req, res) => {
