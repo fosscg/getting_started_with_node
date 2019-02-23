@@ -1,45 +1,20 @@
 /*
-    In this part we will learn how to render different html files
-    according to the routes.
+    Express in a module or a framework build on the top of node.js
+    Express provides a minimal interface to build our applications. 
+    It provides us the tools that are required to build our app.
+    It is flexible as there are numerous modules available on npm,
+    which can be directly plugged into Express.
 */
 
-/*
-    url: The URL module splits up a web address into readable parts.
-    fs: The Node.js file system module allows you to work with the file system on your computer.
-*/
-const http = require('http');
-const url = require('url');
-const fs = require('fs');
+const express = require('express')
+const app = express()
+const port = 3000
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.get('/', (req, res) => res.send('Hello World!'))
 
-// Creating server
-const server = http.createServer(function(req, res) {
-    
-    // Getting the url path with the help of url module
-    const q = url.parse(req.url, true);
+app.get('/hello', (req, res) => {
+    console.log("My first express application at FB Developer Circle!")
+    return res.send('Hello FB Developers Circle!')
+})
 
-    // Trying to get the file name which is asked
-    const filename = "./static" + q.pathname;
-    fs.readFile(filename, function(err, data) {
-        if (err) {
-            // If the required file does not exists then we will land here
-            res.writeHead(404, {'Content-Type': 'text/html'});
-            return res.end("404 Not Found");
-        }
-
-        // If there is no error means we have got the file
-        // Just print it as it is.
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(data);
-        return res.end();
-    });
-});
-
-// Reading requests and sending responses
-server.listen(port, hostname, function() {
-  console.log('Server running at http://'+ hostname + ':' + port + '/');
-});
-
-// Just run yarn start in your terminal or command prompt   
+app.listen(port, () => console.log(`FB Dev Circle app listening on port ${port}!`))
