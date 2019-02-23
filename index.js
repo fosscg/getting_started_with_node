@@ -7,6 +7,7 @@
 */
 
 const express = require('express')
+const path = require('path');
 
 const app = express()
 const port = 3000
@@ -16,7 +17,7 @@ const helloRoutes = require('./routes/index');
 app.use('/', helloRoutes);
 
 app.get('*', function(req, res){
-    res.send('404 Not Found');
+    return res.sendFile(path.join(__dirname+'/static/404.html'))
 });
 
 app.listen(3000)

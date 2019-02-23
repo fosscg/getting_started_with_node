@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const path = require('path');
 
 router.get('/get/:name', function(req, res){
    res.send('Hello ' + req.params.name + ' !');
@@ -15,7 +16,7 @@ router.post('/post', function(req, res){
 
 router.get('/', (req, res) => {
     console.log("My first express application at FB Developer Circle!")
-    return res.send('Hello FB Developers Circle!')
+    return res.sendFile(path.join(__dirname+'/../static/index.html'))
 })
 
 //export this router to use in our index.js
