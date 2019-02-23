@@ -7,9 +7,8 @@
 */
 
 const express = require('express')
-const path = require('path');
-
 const app = express()
+app.set('view engine', 'ejs');
 const port = 3000
 
 const helloRoutes = require('./routes/index');
@@ -17,7 +16,7 @@ const helloRoutes = require('./routes/index');
 app.use('/', helloRoutes);
 
 app.get('*', function(req, res){
-    return res.sendFile(path.join(__dirname+'/static/404.html'))
+    return res.render('404')
 });
 
 app.listen(3000)

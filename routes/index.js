@@ -7,16 +7,37 @@ router.get('/get/:name', function(req, res){
 });
 
 router.get('/greet/:from/:to', function(req, res){
-    res.send('Hello from ' + req.params.from + ' to ' + req.params.to);
+    return res.render('greet', {
+        from: req.params.from,
+        to: req.params.to
+    })
 });
 
 router.post('/post', function(req, res){
-   res.send('POST route on things.');
+   res.send('POST route on things.')
 });
 
+router.get('/loop', (req, res) => {
+    let persons = [{
+        name: "Sam Veg",
+        position: "Khali Pili Admi",
+        specialization: "Khana" 
+    }, {
+        name: "Yash Want",
+        position: "Bhut Khali Pili Admi",
+        specialization: "Kuchh ni"
+    }, {
+        name: "Vri Has",
+        position: "Bhut Busy Admi",
+        specialization: "Chanabata Hai"
+    }]
+    return res.render('loop', {
+        data: persons
+    })
+})
+
 router.get('/', (req, res) => {
-    console.log("My first express application at FB Developer Circle!")
-    return res.sendFile(path.join(__dirname+'/../static/index.html'))
+    return res.render('index')
 })
 
 //export this router to use in our index.js

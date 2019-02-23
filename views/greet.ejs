@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include components/header %>
+  </head>
+  <body>
+    <% include components/navbar %>
+    <section class="section">
+      <div class="container">
+          <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Some good words for <%= to %>
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Before you judge <%= from %>, walk a mile in his shoes. After that who cares?... He’s a mile away and you’ve got his shoes!
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">
+                                - <%= from %>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Some good words for <%= to %>
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                    Light travels faster than sound. This is why <%= to %> appear bright until we hear him speak.
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">
+                                - <%= from %>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </section>
+  </body>
+</html>
