@@ -31,7 +31,7 @@ TO verify if it has been installed in your system open terminal and type
 -> node -v
 ```
 
-If it gives output something like this then :kudos you have successfullt installed node.
+If it gives output something like this then :kudos you have successfully installed node.
 ```
 -> v10.15.0
 ```
