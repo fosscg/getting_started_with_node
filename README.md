@@ -13,17 +13,25 @@ After downloading it just double click it to run and then follow the onscreen in
 #### Linux
 ###### Ubuntu
 Open terminal and paste this
-`-> curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -`
-`-> sudo apt install nodejs`
+```
+-> curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+-> sudo apt install nodejs
+```
 
 ###### Fedora
 Open terminal and paste this
-`-> curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -`
-`-> sudo dnf install -y gcc-c++ make`
-`-> sudo dnf install -y nodejs`
+```
+-> curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+-> sudo dnf install -y gcc-c++ make
+-> sudo dnf install -y nodejs
+```
 
 TO verify if it has been installed in your system open terminal and type
-`-> node -v`
+```
+-> node -v
+```
 
 If it gives output something like this then :kudos you have successfullt installed node.
-`-> v10.15.0`
+```
+-> v10.15.0
+```
