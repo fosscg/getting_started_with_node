@@ -7,14 +7,12 @@
 */
 
 const express = require('express')
+
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => res.send('Hello World!'))
+const helloRoutes = require('./routes/index');
 
-app.get('/hello', (req, res) => {
-    console.log("My first express application at FB Developer Circle!")
-    return res.send('Hello FB Developers Circle!')
-})
+app.use('/', helloRoutes);
 
-app.listen(port, () => console.log(`FB Dev Circle app listening on port ${port}!`))
+app.listen(3000)
