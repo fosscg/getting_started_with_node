@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include components/header %>
+  </head>
+  <body>
+    <% include components/navbar %>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Simple Loop example
+        </h1>
+        <div>
+        <% for(let i=0; i < data.length; i++) { %>
+            <h2>
+                Name: <%= data[i].name %>
+            </h2>
+            <p>Position: <%= data[i].position %></p>
+            <p>Specialixation: <%= data[i].specialization %></p>
+            <hr><br>
+         <% } %>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

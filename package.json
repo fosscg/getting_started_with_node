@@ -1,0 +1,33 @@
+{
+  "name": "getting_started_with_node",
+  "version": "0.0.1",
+  "description": "For the bootcamp organized in FB Dev Circle at 36INC",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdpisda/getting_started_with_node.git"
+  },
+  "keywords": [
+    "node",
+    "Web",
+    "Development",
+    "Getting",
+    "Started"
+  ],
+  "author": "Kuldeep Pisda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kdpisda/getting_started_with_node/issues"
+  },
+  "homepage": "https://github.com/kdpisda/getting_started_with_node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
