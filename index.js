@@ -15,4 +15,8 @@ const helloRoutes = require('./routes/index');
 
 app.use('/', helloRoutes);
 
+app.get('*', function(req, res){
+    res.send('404 Not Found');
+});
+
 app.listen(3000)
