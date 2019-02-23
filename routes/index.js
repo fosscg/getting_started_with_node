@@ -1,8 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/get', function(req, res){
-   res.send('GET route on things.');
+router.get('/get/:name', function(req, res){
+   res.send('Hello ' + req.params.name + ' !');
+});
+
+router.get('/greet/:from/:to', function(req, res){
+    res.send('Hello from ' + req.params.from + ' to ' + req.params.to);
 });
 
 router.post('/post', function(req, res){
